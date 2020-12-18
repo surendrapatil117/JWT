@@ -43,7 +43,9 @@ namespace JWT_token.Controllers
 
         [HttpGet]
         public object GetToken()
-        {//Access token
+        {
+            
+            //Access token //Access token
             var issuer = "http://mysite.com";
             var secretekey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Secret));
             var credentials = new SigningCredentials(secretekey, SecurityAlgorithms.HmacSha256);
